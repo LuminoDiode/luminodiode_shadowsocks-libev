@@ -1,0 +1,10 @@
+{
+    "server":"172.19.0.0",
+    "mode":"tcp_only",
+    "server_port":8388,
+    "local_port":1080,
+    "password":"shadowsocks",
+    "timeout":86400,
+    "method":"chacha20-ietf-poly1305",
+    "fast_open": true
+}

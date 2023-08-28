@@ -1,0 +1,26 @@
+FROM alpine:3
+
+
+RUN apk update -q --no-progress
+RUN apk upgrade -q --no-progress --available
+
+RUN apk add gettext -q --no-progress
+RUN apk add shadowsocks-libev -q --no-progress \ 
+    --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing \
+    --allow-untrusted --purge
+
+# shared part for all builds ↓↓↓
+
+COPY pre_config.json /etc/shadowsocks-libev/pre_config.json
+COPY entrypoint.sh /etc/entrypoint/entrypoint.sh
+
+ENV password=shadowsocks
+ENV ipv4addr=172.33.0.0
+ENV mode=tcp_only
+ENV server_port=8388
+ENV local_port=1080
+ENV timeout=86400
+ENV method=chacha20-ietf-poly1305
+ENV fast_open=true
+
+ENTRYPOINT /etc/entrypoint/entrypoint.sh

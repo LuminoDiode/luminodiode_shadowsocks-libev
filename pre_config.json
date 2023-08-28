@@ -1,0 +1,10 @@
+{
+    "server":"$ipv4addr",
+    "mode":"$mode",
+    "server_port":$server_port,
+    "local_port":$local_port,
+    "password":"$password",
+    "timeout":$timeout,
+    "method":"$method",
+    "fast_open":$fast_open
+}
