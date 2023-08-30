@@ -6,5 +6,6 @@
     "password":"$password",
     "timeout":$timeout,
     "method":"$method",
-    "fast_open":$fast_open
+    "fast_open":$fast_open,
+    "workers":$workers
 }

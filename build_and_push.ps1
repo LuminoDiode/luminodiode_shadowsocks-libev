@@ -7,6 +7,6 @@ docker build -f "./dockerfile.ubuntu" . `
 
 docker push "luminodiode/shadowsocks-libev:alpine";
 docker push "luminodiode/shadowsocks-libev:latest";
-docker push "luminodiode/shadowsocks-libev:debian";
+docker push "luminodiode/shadowsocks-libev:ubuntu";
 
 pause;

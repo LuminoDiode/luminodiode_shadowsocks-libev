@@ -22,5 +22,6 @@ ENV local_port=1080
 ENV timeout=86400
 ENV method=chacha20-ietf-poly1305
 ENV fast_open=true
+ENV workers=1
 
 ENTRYPOINT /etc/entrypoint/entrypoint.sh
